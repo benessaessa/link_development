@@ -9,5 +9,22 @@ $(function() {
         }
     });
 });
-AOS.init();
-new WOW().init();
+document.addEventListener('DOMContentLoaded', function() {
+    var shareButtons = document.querySelectorAll('.share-btn');
+
+    shareButtons.forEach(function(shareButton) {
+        shareButton.addEventListener('click', function() {
+            var socialIcons = shareButton.closest('.card-footer').querySelector('.social-icons');
+
+            // Hide any other open social icons
+            document.querySelectorAll('.social-icons.show').forEach(function(openIcons) {
+                if (openIcons !== socialIcons) {
+                    openIcons.classList.remove('show');
+                }
+            });
+
+            // Toggle the clicked one
+            socialIcons.classList.toggle('show');
+        });
+    });
+});
