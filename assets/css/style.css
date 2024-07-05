@@ -13,7 +13,15 @@ body {
 .text-gray {
     color: #707070;
 }
-
+.text-pink{
+    color: #F215B6;
+}
+.text-green{
+    color: #A6E51C;
+}
+.text-brown{
+    color: #FF7C16;
+}
 .badge-content {
     background-color: rgba(116, 116, 116, 0.2);
     font-size: 14px;
@@ -28,6 +36,91 @@ body {
     font-style: normal;
 }
 
+/* ========================= Slider ====================== */
+.activeHeader,.activeHeader .navbar{
+    background-color: white;
+    border-bottom: 1px solid #ededed;
+}
+.customHeader .nav-item .nav-link{
+    color: #080809;
+}
+.customHeader .navbar-brand img{
+    height: 75px;
+}
+.slide .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+}
+.slide .carousel-indicators .slide-color-pink{
+    width: 40px;
+    height: 40px;
+    background-color: #F215B6;
+    border-radius: 50%;
+}
+.slide .carousel-indicators .slide-color-green{
+    width: 40px;
+    height: 40px;
+    background-color: #A6E51C;
+    border-radius: 50%;
+}
+.slide .carousel-indicators .slide-color-brown{
+    width: 40px;
+    height: 40px;
+    background-color: #FF7C16;
+    border-radius: 50%;
+}
+.slider h3{
+    font-weight: 800;
+    font-size: 20px;
+}
+.slider h2{
+    font-size: 65px;
+    font-weight: bold;
+}
+.slider p{
+    color: #5E6282;
+    font-size: 16px;
+}
+.slider .btn-find{
+    background-color: #FF7C16;
+    color: #FFFFFF;
+    height: 60px;
+}
+.slider .btn-video .demo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.slider .img-bg{
+    right: -300px;
+    top: -300px;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+}
+.slider .img-traveller{
+    height: 500px;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 /* ======================== digital ======================= */
 .digital {
     background-color: #F1F1F1;
@@ -270,6 +363,12 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .slider h3{
+        font-size: 18px;
+    }
+    .slider h2{
+        font-size: 35px;
+    }
     .digital .transformation .item {
         flex: 100%;
         width: 100%;

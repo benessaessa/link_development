@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,228 @@
     <link rel="icon" href="assets/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    <!-- Header  -->
+    <div class="customHeader fixed-top">
+        <nav class="navbar container navbar-expand-lg p-0">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" class="ms-3 ms-lg-0 pt-1" alt="">
+            </a>
+            <button class="navbar-toggler me-4 border-0 shadow-none" type="button" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasLet" aria-controls="offcanvasTop">
+                <i class="fa fa-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav mx-auto pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto pe-3 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn border">Sign up</button>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            En
+                        </a>
+                        <ul class="dropdown-menu dropHeader" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href=#">
+                                    En
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    Ar
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Menu for mobile -->
+    <div class="offcanvas offcanvas-start bg-white text-dark" tabindex="-1" id="offcanvasLet"
+        aria-labelledby="offcanvasLetLabel">
+        <div class="offcanvas-header">
+            <a href="index.html">
+                <img src="assets/images/logo.png" class="ms-3 ms-lg-0 pt-1" width="150px" alt="">
+            </a>
+            <button type="button" class="mt-2 btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#">Home</a>
+                </li>
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#">About us</a>
+                </li>
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#">News</a>
+                </li>
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#">Contact us</a>
+                </li>
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#">Login</a>
+                </li>
+                <li class="list-group-item border-light">
+                    <a class=" text-decoration-none text-second" href="#"><button class="btn border">Sign up</button></a>
+                </li>
+                <li class="list-group-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        En
+                    </a>
+                    <ul class="dropdown-menu dropHeader" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href=#">
+                                En
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">
+                                Ar
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slider (Carousel) -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner slider py-5">
+            <div class="carousel-item active">
+                <div class="container py-5">
+                    <div class="row" dir="rtl">
+                        <div class="col-lg-6">
+                            <img class="img-bg" src="assets/images/Decore.svg" alt="">
+                            <img src="assets/images/Traveller-1.svg" alt="Los Angeles" class="d-block img-traveller" width="100%">
+                        </div>
+                        <div class="col-lg-6 text-start">
+                            <div class="pt-5" dir="ltr">
+                                <h3 class="text-pink">MARKING</h3>
+                                <h2 class="py-4">25 Years of Business Growth</h2>
+                                <p>On-shore, offshore, nearshore and hybrid models for dedicated development, product building and staff augmentation.</p>
+                                <div class="d-flex pt-4 gap-md-4">
+                                    <button class="btn btn-find px-md-5 px-3">Find Out More</button>
+                                    <button class="btn btn-video d-flex align-items-center gap-2">
+                                        <span class="demo">
+                                            <i class="fa fa-play text-white"></i>
+                                        </span>
+                                        <span>Play Demo</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container py-5">
+                    <div class="row" dir="rtl">
+                        <div class="col-lg-6">
+                            <img class="img-bg" src="assets/images/Decore.svg" alt="">
+                            <img src="assets/images/engineer.webp" alt="Los Angeles" class="d-block img-traveller" width="100%">
+                        </div>
+                        <div class="col-lg-6 text-start">
+                            <div class="pt-5" dir="ltr">
+                                <h3 class="text-green">TRENDY INSIDE-OUT</h3>
+                                <h2 class="py-4">Crafty Minds Reshaping Future</h2>
+                                <p>Link Development, Our people,Processes and technologies thrive on digital breakthroughs.</p>
+                                <div class="d-flex pt-4 gap-md-4">
+                                    <button class="btn btn-find px-md-5 px-3">Find Out More</button>
+                                    <button class="btn btn-video d-flex align-items-center gap-2">
+                                        <span class="demo">
+                                            <i class="fa fa-play text-white"></i>
+                                        </span>
+                                        <span>Play Demo</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container py-5">
+                    <div class="row" dir="rtl">
+                        <div class="col-lg-6">
+                            <img class="img-bg" src="assets/images/Decore.svg" alt="">
+                            <img src="assets/images/engineer.webp" alt="Los Angeles" class="d-block img-traveller" width="100%">
+                        </div>
+                        <div class="col-lg-6 text-start">
+                            <div class="pt-5" dir="ltr">
+                                <h3 class="text-brown">OUTSOURCE</h3>
+                                <h2 class="py-4">Global IT <br> Experts</h2>
+                                <p>Link Development, Our people,Processes and technologies thrive on digital breakthroughs.</p>
+                                <div class="d-flex pt-4 gap-md-4">
+                                    <button class="btn btn-find px-md-5 px-3">Find Out More</button>
+                                    <button class="btn btn-video d-flex align-items-center gap-2">
+                                        <span class="demo">
+                                            <i class="fa fa-play text-white"></i>
+                                        </span>
+                                        <span>Play Demo</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Indicators/dots -->
+        <div class="container position-relative">
+            <div class="carousel-indicators d-flex justify-content-start gap-4 ps-4">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active">
+                    <span class="slide-color-pink d-flex"></span>
+                </button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1">
+                    <span class="slide-color-green d-flex"></span>
+                </button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2">
+                    <span class="slide-color-brown d-flex"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Digital Productivity -->
     <div class="digital">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-5">
                     <div class="transformation">
-                        <div class="item item-hover">
+                        <div class="item item-hover" data-aos="zoom-out-right">
                             <img src="assets/images/deliver5.png">
                             <div class="overlay">
                                 <div class="absolute-items">
@@ -32,7 +242,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-relative item-hover">
+                            <div class="position-relative item-hover" data-aos="fade-down">
                                 <img src="assets/images/deliver3.png">
                                 <div class="overlay">
                                     <div class="absolute-items">
@@ -44,7 +254,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="position-relative item-hover">
+                            <div class="position-relative item-hover" data-aos="fade-up">
                                 <img src="assets/images/deliver1.png">
                                 <div class="overlay">
                                     <div class="absolute-items">
@@ -58,7 +268,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-relative item-hover">
+                            <div class="position-relative item-hover" data-aos="fade-down">
                                 <img src="assets/images/deliver2.png">
                                 <div class="overlay">
                                     <div class="absolute-items">
@@ -70,7 +280,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="position-relative item-hover">
+                            <div class="position-relative item-hover" data-aos="fade-up">
                                 <img src="assets/images/deliver4.png">
                                 <div class="overlay">
                                     <div class="absolute-items">
@@ -92,7 +302,9 @@
                                 <div class="ps-3 pe-lg-5 pe-3 py-5">
                                     <h2>We Deliver</h2>
                                     <h2>Digital Productivity</h2>
-                                    <p class="pt-5">We craft technology solutions that digitally bond and transform the productivity of our customers and their citizens, workers, consumers and partners.</p>
+                                    <p class="pt-5">We craft technology solutions that digitally bond and transform the
+                                        productivity of our customers and their citizens, workers, consumers and
+                                        partners.</p>
                                 </div>
                             </div>
                         </div>
@@ -103,421 +315,442 @@
     </div>
     <!-- Top News -->
     <div class="top-news py-5">
-    <div class="container">
-        <div class="text-center">
-            <p class="text-second fw-bold media">Media</p>
-            <h2 class="title text-prim pb-4 poppins-bold">Top News</h2>
-        </div>
+        <div class="container">
+            <div class="text-center">
+                <p class="text-second fw-bold media">Media</p>
+                <h2 class="title text-prim pb-4 poppins-bold">Top News</h2>
+            </div>
 
-        <!-- Nav tabs for news -->
-        <ul class="nav nav-pills justify-content-center gap-4 pb-2">
-            <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="pill" href="#allNews">All news</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#technology">Technology</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#sport">Sport</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#health">Health</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#economics">Economics</a>
-            </li>
-        </ul>
-        
-        
-        <div class="tab-content pt-4">
-            <!-- Tab News -->
-            <div class="tab-pane active" id="allNews">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details1.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">Let us commit to do our part and advance the promise of equality, justice... </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
+            <!-- Nav tabs for news -->
+            <ul class="nav nav-pills justify-content-center gap-4 pb-2">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#allNews">All news</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#technology">Technology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sport">Sport</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#health">Health</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#economics">Economics</a>
+                </li>
+            </ul>
+
+
+            <div class="tab-content pt-4">
+                <!-- Tab News -->
+                <div class="tab-pane active" id="allNews">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details1.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">Let us
+                                            commit to do our part and advance the promise of equality, justice... </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Economics</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Economics</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details2.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">In
+                                            interactive live seminar top lectures of the IHF present current topics for
+                                            all target groups ... </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Sport</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details3.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank"> Libya to
+                                            construct solar plant with Total Energies </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Technology</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details4.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank"> The 2nd IHF
+                                            Wheelchair Handball Seminar begins this Saturday. </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Sport</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details5.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank"> President
+                                            El Sisi Unveils “Egypt Vision 2030” Sustainabl… </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Economics</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details6.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">COVID-19:
+                                            get the latest updates The MoF is leading work across government response to
+                                            COVID-19.</a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Health</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details2.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">In interactive live seminar top lectures of the IHF present current topics for all target groups ... </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Sport</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details3.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank"> Libya to construct solar plant with Total Energies </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Technology</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details4.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank"> The 2nd IHF Wheelchair Handball Seminar begins this Saturday. </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Sport</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details5.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank"> President El Sisi Unveils “Egypt Vision 2030” Sustainabl… </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Economics</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details6.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">COVID-19: get the latest updates The MoF is leading work across government response to COVID-19.</a> 
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Health</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-view mt-4 mt-lg-0">View All News</button>
-                </div>
-            </div>
-            <!-- Tab Technology -->
-            <div class="tab-pane container fade" id="technology">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details3.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">Libya to construct solar plant with Total Energies</h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Technology</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <button class="btn btn-view mt-4 mt-lg-0">View All News</button>
                     </div>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-view mt-4 mt-lg-0">View All Technologies</button>
-                </div>
-            </div>
-            <!-- Tab Sport -->
-            <div class="tab-pane container fade" id="sport">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details2.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">In interactive live seminar top lectures of the IHF present current topics for all target groups ... </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Sport</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
+                <!-- Tab Technology -->
+                <div class="tab-pane container fade" id="technology">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details3.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">Libya to construct solar plant with Total
+                                        Energies</h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Technology</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details4.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank"> The 2nd IHF Wheelchair Handball Seminar begins this Saturday. </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
+                    <div class="text-center">
+                        <button class="btn btn-view mt-4 mt-lg-0">View All Technologies</button>
+                    </div>
+                </div>
+                <!-- Tab Sport -->
+                <div class="tab-pane container fade" id="sport">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details2.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">In
+                                            interactive live seminar top lectures of the IHF present current topics for
+                                            all target groups ... </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Sport</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Sport</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details4.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank"> The 2nd IHF
+                                            Wheelchair Handball Seminar begins this Saturday. </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Sport</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="text-center">
+                        <button class="btn btn-view mt-4 mt-lg-0">View All Sport</button>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-view mt-4 mt-lg-0">View All Sport</button>
-                </div>
-            </div>
-            <!-- Tab Health -->
-            <div class="tab-pane container fade" id="health">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details6.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">COVID-19: get the latest updates The MoF is leading work across government response to COVID-19.</a> 
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Health</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
+                <!-- Tab Health -->
+                <div class="tab-pane container fade" id="health">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details6.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">COVID-19:
+                                            get the latest updates The MoF is leading work across government response to
+                                            COVID-19.</a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Health</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="text-center">
+                        <button class="btn btn-view mt-4 mt-lg-0">View All Health</button>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-view mt-4 mt-lg-0">View All Health</button>
-                </div>
-            </div>
-            <!-- Tab Economics -->
-            <div class="tab-pane container fade" id="economics">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details1.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank">Let us commit to do our part and advance the promise of equality, justice... </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
+                <!-- Tab Economics -->
+                <div class="tab-pane container fade" id="economics">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details1.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank">Let us
+                                            commit to do our part and advance the promise of equality, justice... </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Economics</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Economics</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
+                        </div>
+                        <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
+                            <div class="card card-news">
+                                <img class="card-img-top" src="assets/images/details5.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-second">
+                                        <a class="text-second text-decoration-none" href="" target="_blank"> President
+                                            El Sisi Unveils “Egypt Vision 2030” Sustainabl… </a>
+                                    </h4>
+                                    <p class="card-text d-flex align-items-center gap-2 pt-2">
+                                        <img src="assets/images/calendar.png" alt="calendar">
+                                        <span class="text-gray">Wed 12 Aug 2022</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
+                                    <span class="badge badge-content fw-normal">Economics</span>
+                                    <p class="mb-0">
+                                        <button class="btn py-0 px-1">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn py-0 px-1">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 pb-4 pb-lg-5">
-                        <div class="card card-news">
-                            <img class="card-img-top" src="assets/images/details5.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-second">
-                                    <a class="text-second text-decoration-none" href="" target="_blank"> President El Sisi Unveils “Egypt Vision 2030” Sustainabl… </a>
-                                </h4>
-                                <p class="card-text d-flex align-items-center gap-2 pt-2">
-                                <img src="assets/images/calendar.png" alt="calendar">
-                                <span class="text-gray">Wed 12 Aug 2022</span>
-                                </p>
-                            </div>
-                            <div class="card-footer border-0 pt-1 pb-4 d-flex justify-content-between">
-                                <span class="badge badge-content fw-normal">Economics</span>
-                                <p class="mb-0">
-                                    <button class="btn py-0 px-1">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn py-0 px-1">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <button class="btn btn-view mt-4 mt-lg-0">View All Economics</button>
                     </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-view mt-4 mt-lg-0">View All Economics</button>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer pt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-12 pb-3">
-                <img src="assets/images/logo.png" class="img-footer" alt="">
-                <p class="description pt-4">We make technology produce productive, adaptable and sustainable business experiences.</p>
-            </div>
-            <div class="col-lg-2 col-6 pb-3">
-                <h5 class="title fw-bold pb-3">Company</h5>
-                <p class="link"><a target="_blank" href="#">About</a></p>
-                <p class="link"><a target="_blank" href="#">Careers</a></p>
-                <p class="link"><a href="tel:01114205243">Mobile</a></p>
-            </div>
-            <div class="col-lg-2 col-6 pb-3">
-                <h5 class="title fw-bold pb-3">Contact</h5>
-                <p class="link"><a target="_blank" href="#">Help/FAQ</a></p>
-                <p class="link"><a target="_blank" href="#">Press</a></p>
-                <p class="link"><a href="#">Affilates</a></p>
-            </div>
-            <div class="col-lg-2 col-6 pb-3">
-                <h5 class="title fw-bold pb-3">Media</h5>
-                <p class="link"><a target="_blank" href="#">News</a></p>
-                <p class="link"><a target="_blank" href="#">Photo</a></p>
-                <p class="link"><a href="#">Video</a></p>
-            </div>
-            <div class="col-lg-3 col-sm-6 pb-3">
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 pb-3">
+                    <img src="assets/images/logo.png" class="img-footer" alt="">
+                    <p class="description pt-4">We make technology produce productive, adaptable and sustainable
+                        business experiences.</p>
                 </div>
-                <h5>Discover our app</h5>
-                <div class="d-flex gap-2 pt-2">
-                    <div class="download">
-                        <a href="#" ><img src="assets/images/googleplay.png" alt=""></a>
+                <div class="col-lg-2 col-6 pb-3">
+                    <h5 class="title fw-bold pb-3">Company</h5>
+                    <p class="link"><a target="_blank" href="#">About</a></p>
+                    <p class="link"><a target="_blank" href="#">Careers</a></p>
+                    <p class="link"><a href="tel:01114205243">Mobile</a></p>
+                </div>
+                <div class="col-lg-2 col-6 pb-3">
+                    <h5 class="title fw-bold pb-3">Contact</h5>
+                    <p class="link"><a target="_blank" href="#">Help/FAQ</a></p>
+                    <p class="link"><a target="_blank" href="#">Press</a></p>
+                    <p class="link"><a href="#">Affilates</a></p>
+                </div>
+                <div class="col-lg-2 col-6 pb-3">
+                    <h5 class="title fw-bold pb-3">Media</h5>
+                    <p class="link"><a target="_blank" href="#">News</a></p>
+                    <p class="link"><a target="_blank" href="#">Photo</a></p>
+                    <p class="link"><a href="#">Video</a></p>
+                </div>
+                <div class="col-lg-3 col-sm-6 pb-3">
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
-                    <div class="download">
-                        <a href="#" ><img src="assets/images/apple.png" alt=""></a>
+                    <h5>Discover our app</h5>
+                    <div class="d-flex gap-2 pt-2">
+                        <div class="download">
+                            <a href="#"><img src="assets/images/googleplay.png" alt=""></a>
+                        </div>
+                        <div class="download">
+                            <a href="#"><img src="assets/images/apple.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <p class="text-center pt-4 text-second">All rights reserved@Linkdevelopment.com</p>
         </div>
-        <p class="text-center pt-4 text-second">All rights reserved@Linkdevelopment.com</p>
-    </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/file.js"></script>
 </body>
+
 </html>
