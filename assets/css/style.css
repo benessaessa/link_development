@@ -47,10 +47,37 @@ body {
 .customHeader .navbar-brand img{
     height: 75px;
 }
+.carousel-indicators button {
+    background: none;
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 0 10px; /* Adjust spacing between buttons */
+}
+
+.carousel-indicators button span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+
+.carousel-indicators button:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 30px; /* Adjust as necessary to position the line correctly */
+    width: 40px;  /* Adjust the length of the line */
+    height: 2px;  /* Adjust the thickness of the line */
+    border-bottom: 3px dotted rgb(83, 83, 83); /* Dashed line */
+    transform: translateY(-50%);
+}
 .slide .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: 10px;
     left: 0;
     z-index: 2;
     display: flex;
@@ -60,23 +87,29 @@ body {
     margin-bottom: 1rem;
     margin-left: 0px;
 }
+.slide .carousel-indicators .active{
+    transform: scale(1.2);
+}
 .slide .carousel-indicators .slide-color-pink{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background-color: #F215B6;
     border-radius: 50%;
+    z-index: 1;
 }
 .slide .carousel-indicators .slide-color-green{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background-color: #A6E51C;
     border-radius: 50%;
+    z-index: 1;
 }
 .slide .carousel-indicators .slide-color-brown{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background-color: #FF7C16;
     border-radius: 50%;
+    z-index: 1;
 }
 .slider h3{
     font-weight: 800;
@@ -363,6 +396,14 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .slider .img-traveller{
+        object-fit: contain;
+        height: 400px;
+    }
+    .slider .img-bg{
+        top: -100px;
+        width: 500px;
+    }
     .slider h3{
         font-size: 18px;
     }
